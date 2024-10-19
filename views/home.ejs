@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+
+<% if (personaje) { %>
+    <ul>
+        <li>Id: <%= personaje.id %></li>
+        <li>Name: <%= personaje.firstName %></li>
+        <li>Last Name: <%= personaje.lastName %></li>
+        <li>Full Name: <%= personaje.fullName %></li>
+        <li>Title: <%= personaje.title %></li>
+        <li>Family: <%= personaje.family %></li>
+        <img src="<%= personaje.imageUrl %>" alt="Imagen de <%= personaje.fullName %>">
+    </ul>
+<% } else { %>
+    <p>No se encontró ningún personaje.</p>
+<% } %>
+
+<%- include("partials/footer"); -%>
